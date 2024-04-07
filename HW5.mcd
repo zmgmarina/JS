@@ -122,9 +122,14 @@
         "воскресенье",
       ];
 
-      const result = ru.reduce(function (result, field, index) {
-        result[en[index]] = field;
-        return result;
-      }, {});
-
-      console.log(result);
+      const week = {};
+     
+        if (en.length === ru.length) {
+          for (let i = 0; i < en.length; i++) {
+          week[en[i]] = ru[i];
+          }
+        }
+        else {
+          console.log("Массивы не равны");
+        }
+        console.log(week);
